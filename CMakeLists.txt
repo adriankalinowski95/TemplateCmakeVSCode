@@ -1,11 +1,10 @@
 # Dodaj pliki źródłowe
 project(FirstProject)
 
-set(IS_MACOS False)
+set(CMAKE_BUILD_TYPE Debug)
 
+set(IS_MACOS True)
 if (IS_MACOS)
-
-message("macmamacmcamcamcamcamcamcamcamcamcamcamcamcamcmaamcmcamcam")
 
 set(SOURCES
     main.cpp
@@ -29,8 +28,6 @@ add_executable(${PROJECT_NAME} MACOSX_BUNDLE ${SOURCES} ${CMAKE_CURRENT_SOURCE_D
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
 else()
-
-message("XDDSDASDASDASDADASDASDASDADSADASDASDASD")
 
 set(SOURCES
     main.cpp

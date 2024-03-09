@@ -2,38 +2,6 @@
   "version": "2.0.0",
   "configurations": [
     {
-      "name": "(lldb) Launch",
-      "type": "cppdbg",
-      "request": "launch",
-      "program": "${workspaceRoot}/build/FirstProject.app/Contents/MacOS/FirstProject",
-      "args": [],
-      "stopAtEntry": false,
-      "cwd": "${fileDirname}",
-      "environment": [],
-      "externalConsole": false,
-      "MIMode": "lldb",
-      "targetArchitecture": "arm64"
-    },
-    {
-      "name": "C++ Launch MacOS",
-      "type": "cppdbg",
-      "request": "launch",
-      "preLaunchTask": "preLaunchAll",
-      "program": "${workspaceRoot}/build/FirstProject.app/Contents/MacOS/FirstProject",
-      "logging": {
-        "moduleLoad": false,
-        "programOutput": true,
-        "trace": false
-      },
-      "showDisplayString": false,
-      "args": [],
-      "stopAtEntry": false,
-      "cwd": "${fileDirname}",
-      "environment": [],
-      "MIMode": "lldb",
-      "targetArchitecture": "arm64"
-    },
-    {
       "name": "C++ Launch",
       "type": "cppdbg",
       "request": "launch",
@@ -56,25 +24,44 @@
       }
     },
     {
-      "name": "C/C++: clang++ build and debug active file",
+      "name": "C++ Launch MacOS debug",
       "type": "cppdbg",
       "request": "launch",
+      "preLaunchTask": "preLaunchAllMacosDebug",
       "program": "${workspaceRoot}/build/FirstProject.app/Contents/MacOS/FirstProject",
+      "logging": {
+        "moduleLoad": true,
+        "programOutput": true,
+        "trace": true
+      },
+      "showDisplayString": false,
       "args": [],
       "stopAtEntry": false,
-      "cwd": "${workspaceRoot}",
+      "cwd": "${fileDirname}",
       "environment": [],
-      "externalConsole": false,
       "MIMode": "lldb",
-      "preLaunchTask": "C/C++: clang++ build active file"
+      "targetArchitecture": "arm64",
+      "externalConsole": true
     },
     {
-      "name": "C/C++ Runner: Debug Session",
-      "type": "lldb",
+      "name": "C++ Launch MacOS release",
+      "type": "cppdbg",
       "request": "launch",
+      "preLaunchTask": "preLaunchAllMacosRelease",
+      "program": "${workspaceRoot}/build/FirstProject.app/Contents/MacOS/FirstProject",
+      "logging": {
+        "moduleLoad": true,
+        "programOutput": true,
+        "trace": true
+      },
+      "showDisplayString": false,
       "args": [],
-      "cwd": "/Users/adriankalinowski/Desktop/vs_projects/vs_code_proj",
-      "program": "/Users/adriankalinowski/Desktop/vs_projects/vs_code_proj/build/Debug/outDebug"
+      "stopAtEntry": false,
+      "cwd": "${fileDirname}",
+      "environment": [],
+      "MIMode": "lldb",
+      "targetArchitecture": "arm64",
+      "externalConsole": true
     }
   ]
 }
