@@ -9,4 +9,4 @@ set(CMAKE_BUILD_TYPE Debug)
 
 project(FirstProject)
 
-add_executable(FirstProject main.cpp)
+add_executable(FirstProject main.mm)
