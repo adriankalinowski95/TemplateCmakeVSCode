@@ -5,7 +5,7 @@
       "name": "C++ Launch",
       "type": "cppdbg",
       "request": "launch",
-      "program": "${workspaceRoot}/build/FirstProject",
+      "program": "${workspaceRoot}/build/${config:Project_Name}",
       "preLaunchTask": "preLaunchAll",
       "internalConsoleOptions": "openOnSessionStart",
       "logging": {
@@ -28,7 +28,7 @@
       "type": "cppdbg",
       "request": "launch",
       "preLaunchTask": "preLaunchAllMacosDebug",
-      "program": "${workspaceRoot}/build/FirstProject.app/Contents/MacOS/FirstProject",
+      "program": "${workspaceRoot}/build/${config:Project_Name}.app/Contents/MacOS/${config:Project_Name}",
       "logging": {
         "moduleLoad": true,
         "programOutput": true,
@@ -48,7 +48,7 @@
       "type": "cppdbg",
       "request": "launch",
       "preLaunchTask": "preLaunchAllMacosRelease",
-      "program": "${workspaceRoot}/build/FirstProject.app/Contents/MacOS/FirstProject",
+      "program": "${workspaceRoot}/build/${config:Project_Name}.app/Contents/MacOS/${config:Project_Name}",
       "logging": {
         "moduleLoad": true,
         "programOutput": true,

@@ -3,8 +3,13 @@ project(FirstProject)
 
 set(CMAKE_BUILD_TYPE Debug)
 
-set(IS_MACOS True)
-if (IS_MACOS)
+set(IS_MACOS "false")
+
+if (DEFINED CMAKE_IS_MACOS) 
+    set(IS_MACOS "true")
+endif()
+
+if (IS_MACOS STREQUAL "true")
 
 set(SOURCES
     main.cpp

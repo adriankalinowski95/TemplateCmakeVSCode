@@ -79,7 +79,8 @@
                 "${workspaceFolder}/build",
                 "-G",
                 "\"Xcode\"",
-                "-DPROJECT_ARCH=\"arm64\""
+                "-DPROJECT_ARCH=\"arm64\"",
+                "-DCMAKE_IS_MACOS=\"true\""
             ],
             "group": {
                 "kind": "build",
