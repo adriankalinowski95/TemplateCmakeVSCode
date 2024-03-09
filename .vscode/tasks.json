@@ -1,0 +1,78 @@
+{
+    "version": "2.0.0",
+    "tasks": 
+    [
+        {
+            "label": "create_builder_folder",
+            "type": "shell",
+            "command": "mkdir",
+            "args": [
+                "-p",
+                "${workspaceFolder}/build"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "silent"
+            }
+        },
+        {
+            "label": "cmake_build",
+            "command": "cmake",
+            "args": [
+                "-B",
+                "${workspaceFolder}/build"
+            ],
+            "type": "shell",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "problemMatcher": {
+                "owner": "cpp",
+                "fileLocation": [
+                    "relative",
+                    "${workspaceRoot}/build"
+                ],
+                "pattern": {
+                    "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                    "file": 1,
+                    "line": 2,
+                    "column": 3,
+                    "severity": 4,
+                    "message": 5
+                }
+            }
+        },
+        {
+            "label": "make_compile",
+            "type": "shell",
+            "command": "make",
+            "args": [
+                "-C",
+                "${workspaceFolder}/build"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "silent"
+            },
+            "problemMatcher": {
+                "owner": "cpp",
+                "fileLocation": ["relative", "${workspaceFolder}/build"]
+            }
+        },
+        {
+            "label": "preLaunchAll",
+            //"dependsOn": ["npm-start"],
+            "dependsOn": ["create_builder_folder", "cmake_build", "make_compile"],
+            //"dependsOn": ["build protobuf"],
+            "dependsOrder": "sequence" // lub "parallel" w zależności od potrzeb
+        }
+    ]
+}
